@@ -31,7 +31,15 @@ class _DashboardPage extends State<DashboardPage> {
         Navigator.pushReplacementNamed(context, "/wrap_sample");
       },
       color: Colors.teal,
-      child: Text("Expanded Row"),
+      child: Text("Wrap"),
+    );
+
+    var btnAnimatedContainer = new FlatButton(
+      onPressed: () {
+        Navigator.pushReplacementNamed(context, "/animated_container_sample");
+      },
+      color: Colors.amber,
+      child: Text("Animated Container"),
     );
 
     var listBtn = new Column(
@@ -39,7 +47,8 @@ class _DashboardPage extends State<DashboardPage> {
       children: [
         btnExpandedColumnSample,
         btnExpandedRowSample,
-        btnWrapSample
+        btnWrapSample,
+        btnAnimatedContainer
       ],
     );
 
