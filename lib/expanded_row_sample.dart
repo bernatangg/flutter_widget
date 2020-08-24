@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ExpandedColumnSample extends StatefulWidget {
+class ExpandedRowSample extends StatefulWidget {
 
   @override
-  _MyExpandedColumn createState() => new _MyExpandedColumn();
+  _MyExpandedRow createState() => new _MyExpandedRow();
 
-  }
+}
 
-class _MyExpandedColumn extends State<ExpandedColumnSample> {
-
+class _MyExpandedRow extends State<ExpandedRowSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,27 +18,30 @@ class _MyExpandedColumn extends State<ExpandedColumnSample> {
             Navigator.pushReplacementNamed(context, "/");
           },
         ),
-        title: Text("Expanded Column Sample"),
+        title: Text("Expanded Row Sample"),
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
+        child: Row(
           children: [
-            Container(
-              color: Colors.blue,
-              height: 100,
-              width: 100,
-            ),
             Expanded(
+              flex: 2,
               child: Container(
                 color: Colors.amber,
-                width: 100,
+                height: 100,
               ),
             ),
             Container(
               color: Colors.blue,
               height: 100,
-              width: 100,
+              width: 50,
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors.amber,
+                height: 100,
+              ),
             ),
           ],
         ),

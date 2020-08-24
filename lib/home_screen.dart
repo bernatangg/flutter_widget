@@ -18,10 +18,19 @@ class _DashboardPage extends State<DashboardPage> {
       child: Text("Expanded Column"),
     );
 
+    var btnExpandedRowSample = new FlatButton(
+      onPressed: () {
+        Navigator.pushReplacementNamed(context, "/expanded_row_sample");
+      },
+      color: Colors.amber,
+      child: Text("Expanded Row"),
+    );
+
     var listBtn = new Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         btnExpandedColumnSample,
+        btnExpandedRowSample,
       ],
     );
 
