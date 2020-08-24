@@ -22,7 +22,15 @@ class _DashboardPage extends State<DashboardPage> {
       onPressed: () {
         Navigator.pushReplacementNamed(context, "/expanded_row_sample");
       },
-      color: Colors.amber,
+      color: Colors.blue,
+      child: Text("Expanded Row"),
+    );
+
+    var btnWrapSample = new FlatButton(
+      onPressed: () {
+        Navigator.pushReplacementNamed(context, "/wrap_sample");
+      },
+      color: Colors.teal,
       child: Text("Expanded Row"),
     );
 
@@ -31,6 +39,7 @@ class _DashboardPage extends State<DashboardPage> {
       children: [
         btnExpandedColumnSample,
         btnExpandedRowSample,
+        btnWrapSample
       ],
     );
 

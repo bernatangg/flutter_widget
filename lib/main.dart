@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/home_screen.dart';
 import 'package:flutter_app/expanded_column_sample.dart';
+import 'package:flutter_app/wrap_example.dart';
 
 import 'expanded_row_sample.dart';
 
@@ -12,6 +13,7 @@ final routes = {
   '/': (BuildContext context) => new DashboardPage(),
   '/expanded_column_sample': (BuildContext context) => new ExpandedColumnSample(),
   '/expanded_row_sample': (BuildContext context) => new ExpandedRowSample(),
+  '/wrap_sample': (BuildContext context) => new WrapExamplePage(),
 };
 
 class MyApp extends StatelessWidget {
